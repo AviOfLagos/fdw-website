@@ -1,0 +1,31 @@
+/* Design system extracted from opencode.ai (computed styles, 21 Aug 2026).
+   Berkeley Mono is commercial; IBM Plex Mono is their own declared fallback,
+   so it is what we load. */
+:root {
+  --bg:        #0c0c0e;
+  --panel:     #1b1818;
+  --text:      #f2eded;
+  --text-2:    #b8b2b2;
+  --text-3:    #7f7a7a;
+  --text-4:    #716b6a;
+  --border:    #3d3838;
+  --invert-fg: #131010;
+
+  --container: 1080px;
+  --mono: var(--font-plex), 'Berkeley Mono', 'IBM Plex Mono', ui-monospace,
+          SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+html { background: var(--bg); color: var(--text); }
+body {
+  background: var(--bg); color: var(--text);
+  font-family: var(--mono); font-size: 16px; line-height: 1.5; font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+::selection { background: var(--text); color: var(--invert-fg); }
+:focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
